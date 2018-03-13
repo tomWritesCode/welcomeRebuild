@@ -9,7 +9,7 @@ body{
   margin-top: 0;
 }
 
-h2 {
+h2.logo {
   height: 30px;
   background-color: #3979f9;
   padding: 30px;
@@ -30,8 +30,35 @@ span {
   }
 }
 
+.bannerBackground{
+    background-color: #b3e5fc;
+    margin: 0 auto;
+    width: calc(100vw + 50px);
+    margin-left: -100px;
+
+}
+.leadText{
+  display: block;
+  margin: 50px auto;
+  font-size: 1.9vw;
+  width: 75vw;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+@media(max-width: 500px){
+  .leadText{
+    font-size: 5vw;
+    width: 90vw;
+  }
+  .blurb-l{
+    font-size: 4.9vw;
+    text-align: center
+  }
+}
+
+/* ENTRY ANIMATION */
 .container {
-  /*   background-color: yellow; */
   width: 95vw;
   margin: 0 auto;
   margin-top: 110vh;
@@ -89,12 +116,11 @@ span {
   }
 }
 
-/* Grid from here down */
+/* GRID LAYOUT */
 
 .box {
   background-color: lightgrey;
   text-align: center;
-  padding-top: 20px;
   border-radius: 3px;
 }
 
