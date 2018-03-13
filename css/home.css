@@ -30,32 +30,6 @@ span {
   }
 }
 
-.bannerBackground{
-    background-color: #b3e5fc;
-    margin: 0 auto;
-    width: calc(100vw + 50px);
-    margin-left: -100px;
-
-}
-.leadText{
-  display: block;
-  margin: 50px auto;
-  font-size: 1.9vw;
-  width: 75vw;
-  font-weight: bold;
-  font-style: italic;
-  text-align: center;
-}
-@media(max-width: 500px){
-  .leadText{
-    font-size: 5vw;
-    width: 90vw;
-  }
-  .blurb-l{
-    font-size: 4.9vw;
-    text-align: center
-  }
-}
 
 /* ENTRY ANIMATION */
 .container {
@@ -191,5 +165,7 @@ span {
 .box:hover {
   transform: scale(1.04);
   transition-duration: 0.5s;
-  border: 3px solid #3979f9;
+  -webkit-box-shadow: 6px 8px 20px -2px rgba(79,79,79,0.59);
+  -moz-box-shadow: 6px 8px 20px -2px rgba(79,79,79,0.59);
+  box-shadow: 6px 8px 20px -2px rgba(79,79,79,0.59);
 }
