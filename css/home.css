@@ -1,0 +1,165 @@
+html{
+  font-family: Arial, Helvetica, sans-serif
+}
+.start {
+  margin-top: 0;
+}
+
+h2 {
+  height: 30px;
+  background-color: #3979f9;
+  padding: 30px;
+}
+
+span {
+  margin-left: -30px;
+  color: white;
+  background-color: black;
+  padding: 10px 10px 10px 70px;
+  font-size: 30px;
+  border-radius: 0 7px 7px 0;
+}
+
+@media (max-width: 500px) {
+  span {
+    font-size: 20px;
+  }
+}
+
+.container {
+  /*   background-color: yellow; */
+  width: 95vw;
+  margin: 0 auto;
+  margin-top: 110vh;
+  margin-bottom: 50px;
+}
+
+.bannerContainer {
+  animation: entry 4s;
+  animation-iteration-count: 1;
+}
+
+.bodyPull {
+  margin-top: 0;
+  animation: bodyPull 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes entry {
+  0% {
+    margin-top: 110vh;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 40vh;
+    opacity: 1;
+  }
+  60% {
+    margin-top: 40vh;
+  }
+  70% {
+    margin-top: 40vh;
+  }
+  100% {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes step2 {
+  0% {
+    margin-top: 40vh;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes bodyPull {
+  0% {
+    margin-top: 110vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* Grid from here down */
+
+.box {
+  background-color: lightgrey;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 3px;
+}
+
+@supports (display:grid) {
+  .grid {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.5vw;
+    height: 100%;
+    min-height: 100vh;
+    width: 90vw;
+    min-width: 90vw;
+    padding: 1.5vw;
+  }
+  @media (max-width: 500px) {
+    /* Phone Grid */
+    .grid {
+      grid-template-columns: 49vw, 49%;
+      grid-template-rows: repeat(4, 20%);
+      grid-template-areas: "full full" "small1 small2" "small3 small4" "small5 small5";
+    }
+    /* .grid - Close */
+  }
+  /* Media Query - Close */
+  @media (min-width: 501px) {
+    /* Desktop Grid */
+    .grid {
+      grid-template-columns: repeat(3, 32%);
+      grid-template-rows: repeat(3, 33vh);
+      grid-template-areas: "full full small1" "small2 small3 small4" "small5 small5 small5"
+    }
+    /* .grid - Close */
+  }
+  /* Media Query - Close */
+  .grid .item:nth-child(1) {
+    grid-area: full;
+  }
+  .grid .item:nth-child(2) {
+    grid-area: small1;
+  }
+  .grid .item:nth-child(3) {
+    grid-area: small2;
+  }
+  .grid .item:nth-child(4) {
+    grid-area: small3;
+  }
+  .grid .item:nth-child(5) {
+    grid-area: small4;
+  }
+  .grid .item:nth-child(6) {
+    grid-area: small5;
+  }
+}
+
+/* Supports Grid - Close */
+
+@supports not (display: grid) {
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100vh;
+    padding: 0.75vw;
+  }
+}
+
+/* FLEXBOX FALLBACK - Close*/
+
+.box:hover {
+  transform: scale(1.04);
+  transition-duration: 0.5s;
+  border: 3px solid #3979f9;
+}
